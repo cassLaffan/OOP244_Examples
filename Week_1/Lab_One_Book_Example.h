@@ -17,6 +17,7 @@ class Book{
     int pageLength;
 public:
     Book(int, std::string, int);
+    Book();
 
     int getBookID();
     void setBookID(int);

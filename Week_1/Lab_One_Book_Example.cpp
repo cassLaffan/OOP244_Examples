@@ -6,6 +6,13 @@ Book::Book(int num, std::string title, int length){
     pageLength = length;
 }
 
+// Added for helpfulness later, sets a default state
+Book::Book(){
+    bookID = -1;
+    bookTitle.assign("");
+    pageLength = -1;
+}
+
 int Book::getBookID(){
     return bookID;
 }
@@ -28,4 +35,20 @@ int Book::getPageLength(){
 
 void Book::setPageLength(int len){
     pageLength = len;
+}
+
+// Again adding the main here because it's easier to keep
+// track of.
+
+int main(){
+    // Create empty Book objects
+    Book one, two;
+    // Create a populated Book object
+    Book three(9389, "To Kill a Mocking Bird", 336);
+
+    std::cout << "The book number for the first book is: " << one.getBookID() << std::endl;
+    std::cout << "The book number for the second book is: " << two.getBookID() << std::endl;
+    std::cout << "The book number for the third book is: " << three.getBookID() << std::endl;
+
+    return 0;
 }
