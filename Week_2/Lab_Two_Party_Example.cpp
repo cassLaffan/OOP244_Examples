@@ -87,7 +87,7 @@ std::string* Party::getGuestList(){
 bool Party::addGuestToGuestList(std::string name){
     bool isAdded = false;
 
-    if(!(currentGuests == maxGuests -1)){
+    if(!(currentGuests == maxGuests)){
         guestList[currentGuests].assign(name);
         currentGuests++; // We want to be able to add at the next spot
         isAdded = true;
