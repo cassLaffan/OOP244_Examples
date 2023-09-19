@@ -22,7 +22,7 @@ Party::Party(std::string name, std::string loc, std::string day, float start, fl
 }
 
 Party::~Party(){
-    delete guestList;
+    delete [] guestList;
 }
 
 std::string Party::getHostName(){
