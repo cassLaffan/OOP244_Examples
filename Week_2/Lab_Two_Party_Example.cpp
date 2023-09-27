@@ -8,6 +8,7 @@ Party::Party(){
     endTime = -1.0;
     maxGuests = -1;
     currentGuests = 0;
+    guestList = nullptr;
 }
 
 Party::Party(std::string name, std::string loc, std::string day, float start, float end, int max = 50){
