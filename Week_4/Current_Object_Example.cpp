@@ -17,14 +17,10 @@ Flower::Flower(int flowerID, std::string species, std::string genus, std::string
 }
 
 Flower::Flower(const Flower& other){
-    // Here, we are creating a new kind of constructor that essentially
-    // does the same thing as overriding the = operator
     this->flowerID = other.flowerID;
     this->species.assign(other.species);
     this->genus.assign(other.genus);
     this->subFamily.assign(other.subFamily);
-    // You'll notice that if you attempt to use the getters with a const, you'll run into issues
-
 }
 
 // Getters and setters
