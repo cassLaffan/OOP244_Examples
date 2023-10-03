@@ -19,11 +19,17 @@ class Bouquet{
     int currentFlower;
     Flower* flowerArray;
 public:
+    // Functions which eliminate redundant codein constructors 
+    void emptyInit();
+    void setMembers(Bouquet&); // eliminates redundancy between copy constructor and = operator
+
+    // Constructors and destructor
     Bouquet();
     Bouquet(int, std::string, int);
     Bouquet(Bouquet&); // reference to another Bouquet object
 
     ~Bouquet(); // necessary because of dynamic memory
+
 
     // Getters (constant today)
 

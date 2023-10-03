@@ -1,12 +1,16 @@
 #include "Bouquet_Lab_Example.h"
 
-// Safe state constructor
-Bouquet::Bouquet(){
+void Bouquet::emptyInit(){
     this->bouqID = -1;
     this->colourScheme.assign("");
     this->flowerArraySize = -1;
     this->currentFlower = -1;
     this->flowerArray = nullptr;
+}
+
+// Safe state constructor
+Bouquet::Bouquet(){
+    this->emptyInit();
 }
 
 Bouquet::Bouquet(int ID, std::string colour, int max){
@@ -17,8 +21,7 @@ Bouquet::Bouquet(int ID, std::string colour, int max){
     this->flowerArray = new Flower[max];
 }
 
-Bouquet::Bouquet(Bouquet& other){
-    // Consider how to check if other is initialized empty or not
+void Bouquet::setMembers(Bouquet& other){
     this->bouqID = other.bouqID;
     this->colourScheme.assign(other.colourScheme);
     this->flowerArraySize = other.flowerArraySize;
@@ -30,12 +33,46 @@ Bouquet::Bouquet(Bouquet& other){
     }
 }
 
+Bouquet::Bouquet(Bouquet& other){
+    // Checking if other is empty
+    if(other.bouqID = -1){
+        // Calls the empty constructor helper function
+        this->emptyInit();
+    }
+    else{
+        // Populates using the setMembers function
+        setMembers(other);
+    }
+}
+
 Bouquet::~Bouquet(){
     delete [] this->flowerArray;
     this->flowerArray = nullptr; // not necessary but good practice
 }
 
-// Getters and setters
+int Bouquet::getBouqID() const{
+    return this->bouqID;
+}
+std::string Bouquet::getColourScheme() const{
+    return this->colourScheme;
+}
+int Bouquet::getMaxFlowers() const{
+    return this->flowerArraySize;
+}
+
+Flower* Bouquet::getFlowerArray() const{
+    return this->flowerArray;
+}
+
+// Setters
+
+void Bouquet::setBouqID(int ID){
+    this->bouqID = ID;
+}
+
+void Bouquet::setColourScheme(std::string scheme){
+    this->colourScheme.assign(scheme);
+}
 
 void Bouquet::setMaxFlowers(int max){
     if(!this->flowerArray){
@@ -62,14 +99,12 @@ Bouquet& Bouquet::operator=(Bouquet& other){
         //delete [] this->flowerArray;
         //this->flowerArray = nullptr;
     }
-    // REDUNDANT CODE TODO: MAKE BETTER (abstract into another function)
-    this->bouqID = other.bouqID;
-    this->colourScheme.assign(other.colourScheme);
-    this->flowerArraySize = other.flowerArraySize;
-    this->flowerArray = new Flower[this->flowerArraySize];
+    
+    setMembers(other);
 
-    for(int i = 0; i <= other.currentFlower; i++){
-        this->flowerArray[i] = Flower(other.flowerArray[i]);
-        this->currentFlower++;
-    }
+    return *this;
 }
+
+//int main(){
+//   return 0;
+//}
