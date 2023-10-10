@@ -40,14 +40,34 @@ Textbook::~Textbook(){
     delete [] courseList;
 }
 
-std::string Textbook::getSubject() const{}
-std::string Textbook::getInstitution() const{}
-int Textbook::getMaxArraySize() const{}
-int Textbook::getCurrentArraySize() const{}
-std::string* Textbook::getCourseList() const{}
+std::string Textbook::getSubject() const{
+    return subject;
+}
 
-void Textbook::setSubject(std::string){}
-void Textbook::setInstitution(std::string){}
+std::string Textbook::getInstitution() const{
+    return institution;
+}
+
+int Textbook::getMaxArraySize() const{
+    return maxArraySize;
+}
+
+int Textbook::getCurrentArraySize() const{
+    return currentArrayLoc;
+}
+
+std::string* Textbook::getCourseList() const{
+    return courseList;
+}
+
+
+void Textbook::setSubject(std::string sub){
+    this->subject.assign(sub);
+}
+
+void Textbook::setInstitution(std::string inst){
+    this->institution.assign(inst);
+}
 
 void Textbook::setMaxArraySize(int max){
     if(this->maxArraySize == -1){
