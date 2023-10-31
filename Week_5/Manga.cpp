@@ -71,6 +71,9 @@ int main(){
     // Creating a populated manga
     Manga five(false, true, "English", 390522, "Princess Jellyfish", 200);
 
+    // Using the copy Constructor
+    Manga six(five);
+
     // Now let's see what happens when we print these off!
     std::cout << "The book number for the first MANGA is: " << four.getBookID() << std::endl;
     std::cout << "The book number for the second MANGA is: " << five.getBookID() << std::endl;
