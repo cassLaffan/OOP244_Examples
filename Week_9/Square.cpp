@@ -6,8 +6,8 @@ Square::Square(){
 }
 
 Square::Square(float w, float h){
-    width = 0.0;
-    height = 0.0;
+    width = w;
+    height = h;
 }
 
 // Now we have concrete implementations of these!
