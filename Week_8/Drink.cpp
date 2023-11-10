@@ -49,3 +49,17 @@ void Drink::setName(std::string name){
 void Drink::setSize(int size){
     this->size = size;
 }
+
+
+int main(){
+
+    Consumable A;
+    A.setCooked(true);
+
+    Drink B(100, "Coffee", 3, "Milk");
+    setFlavour(B, "Vanilla");
+
+    std::cout << B.getFlavour() << std::endl;
+    std::cout << A.getCooked() << std::endl;
+
+}
