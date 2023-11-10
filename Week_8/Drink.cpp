@@ -1,5 +1,13 @@
 #include "Drink.h"
 
+bool Consumable::getCooked() const{
+    return shouldBeCooked;
+}
+
+void Consumable::setCooked(bool c){
+    shouldBeCooked = c;
+}
+
 Drink::Drink(){
     drinkID = -1;
     drinkName.assign("");
