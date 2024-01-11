@@ -11,22 +11,5 @@ member attributes so we don't have to access the innards of
 an object directly, and "set" said members!
 */
 
-class Book{
-    int bookID;
-    std::string bookTitle;
-    int pageLength;
-public:
-    Book(int, std::string, int);
-    Book();
-
-    int getBookID();
-    void setBookID(int);
-
-    std::string getBookTitle();
-    void setBookTitle(std::string);
-
-    int getPageLength();
-    void setPageLength(int);
-};
 
 #endif
