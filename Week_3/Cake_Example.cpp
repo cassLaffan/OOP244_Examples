@@ -69,7 +69,7 @@ bool Cake::operator==(Cake& other) const{
 
 // Overloaded operator
 bool Cake::operator==(float& w) const{
-    return this->weight == w;
+    return (int)this->weight == (int)w;
 }
 
 // Why
