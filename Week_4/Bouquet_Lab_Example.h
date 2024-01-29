@@ -1,5 +1,5 @@
 /*
-* Create a class for a Buoquet of flower objects from the other examples
+* Create a class for a Bouquet of flower objects from the other examples
 * in this week's folder! This class should have an ID, a colour scheme,
 * and a dynamic array of Flower objects.
 
@@ -19,9 +19,8 @@ class Bouquet{
     int currentFlower;
     Flower* flowerArray;
 public:
-    // Functions which eliminate redundant codein constructors 
-    void emptyInit();
-    void setMembers(Bouquet&); // eliminates redundancy between copy constructor and = operator
+    // eliminates redundancy between copy constructor and = operator
+    void setMembers(Bouquet&); 
 
     // Constructors and destructor
     Bouquet();
@@ -39,7 +38,6 @@ public:
     Flower* getFlowerArray() const;
 
     // Setters
-
     void setBouqID(int);
     void setColourScheme(std::string);
     void setMaxFlowers(int);
