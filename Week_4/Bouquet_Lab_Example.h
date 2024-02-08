@@ -20,15 +20,15 @@ class Bouquet{
     Flower* flowerArray;
 public:
     // eliminates redundancy between copy constructor and = operator
-    void setMembers(Bouquet&); 
+    void setMembers(const Bouquet&); 
+    void constructorHelper(int, std::string, int);
 
     // Constructors and destructor
     Bouquet();
     Bouquet(int, std::string, int);
-    Bouquet(Bouquet&); // reference to another Bouquet object
+    Bouquet(const Bouquet&); // reference to another Bouquet object
 
     ~Bouquet(); // necessary because of dynamic memory
-
 
     // Getters (constant today)
 
@@ -45,7 +45,7 @@ public:
     bool addFlowerToArray(Flower&);
     
     // Operator overloading
-    Bouquet& operator=(Bouquet&);
+    Bouquet& operator=(const Bouquet&);
 };
 
 #endif
