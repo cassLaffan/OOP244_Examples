@@ -1,6 +1,5 @@
 #include "Manga.h"
 
-
 Manga::Manga(){
     this->setBookID(-1);
     this->setBookTitle("");

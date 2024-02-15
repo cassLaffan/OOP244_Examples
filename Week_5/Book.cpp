@@ -48,4 +48,6 @@ std::ostream& Book::displayBook(std::ostream& os){
     os << "Book Number: " << this->bookID << std::endl;
     os << "Book Title: " << this->bookTitle << std::endl;
     os << "Page Length: " << this->pageLength << std::endl;
+
+    return os;
 }
