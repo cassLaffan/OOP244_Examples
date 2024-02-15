@@ -7,6 +7,7 @@
 // For a manga class, defined in another file
 
 class Book{
+protected:
     int bookID;
     std::string bookTitle;
     int pageLength;
@@ -23,6 +24,8 @@ public:
 
     int getPageLength();
     void setPageLength(int);
+
+    std::ostream& displayBook(std::ostream&);
 };
 
 #endif
