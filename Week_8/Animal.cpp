@@ -72,7 +72,7 @@ void makeMeow(Cat aCat, int num){
 int main(){
     Cat catOne("Russian blue", 923, "Grey");
     Cat catTwo();
-    Cat catThree("Stand Issur Cat", 45, "Brown");
+    Cat catThree("Stand Issue Cat", 45, "Brown");
 
     return 0;
 }
