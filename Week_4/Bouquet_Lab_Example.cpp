@@ -92,6 +92,9 @@ bool Bouquet::addFlowerToArray(Flower& newFlower){
     return success;
 }
 
+
+// Defines behaviour for the assignment operator (=)
+// Ex: Bouquet A, B; A = B
 Bouquet& Bouquet::operator=(const Bouquet& other){
     this->setMembers(other);
     return *this;
