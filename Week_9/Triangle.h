@@ -12,6 +12,18 @@
 * gets three variables: side A, B and C!
 */
 
-class Triangle : public Shape{};
+class Triangle : public Shape{
+    float A;
+    float B;
+    float C;
+public:
+    Triangle();
+    Triangle(float, float);
+
+    // TODO: Add getter for C
+
+    float area() const;
+    float parameter() const;
+};
 
 #endif
