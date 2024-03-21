@@ -13,6 +13,7 @@
 */
 
 class Triangle : public Shape{
+protected:
     float A;
     float B;
     float C;
@@ -22,8 +23,8 @@ public:
 
     // TODO: Add getter for C
 
-    float area() const;
-    float parameter() const;
+    virtual float area() const = 0;
+    virtual float parameter() const = 0;
 };
 
 #endif

@@ -13,10 +13,4 @@ Triangle::Triangle(float a, float b){
     C = sqrt(A*A + B*B); // That way we have a safe triangle
 }
 
-float Triangle::parameter() const{
-    return (A + B + C);
-}
 
-float Triangle::area() const{
-    return (A * B) / 2;
-}
