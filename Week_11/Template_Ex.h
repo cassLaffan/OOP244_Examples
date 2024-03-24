@@ -10,7 +10,7 @@
 * NOT the CPP file. 
 */
 
-// Array example
+// Array template example
 template <class T, int N>
 class Array {
     T a[N];
