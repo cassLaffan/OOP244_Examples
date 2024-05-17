@@ -27,8 +27,10 @@ Course::Course(int id, std::string name, std::string weekDay, int time,
 }
 
 Course::~Course(){
-    delete [] studentList; // frees memory back to OS
-    studentList = nullptr; // ensures pointer points to a safe place
+    if(studentList){
+        delete [] studentList; // frees memory back to OS
+        studentList = nullptr; // ensures pointer points to a safe place
+    }
 }
 
 // Getters and setters
