@@ -98,6 +98,7 @@ bool readFlowerFile(std::string fileName, Flower* flowerList){
     return success;
 }
 
+/*
 int main(){
     Flower flowers[MAX] = {Flower()};
     bool output = readFlowerFile("flowers.txt", flowers);
@@ -108,4 +109,4 @@ int main(){
     std::cout << flowers[2].getSpecies() << std::endl;
 
     return 0;
-}
+}*/
