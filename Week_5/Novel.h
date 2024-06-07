@@ -10,7 +10,7 @@
 */
 
 class Novel : public Book{
-    // int bookID; // for experimentation later
+    int bookID; // for experimentation later
     std::string author;
     int publicationYear;
 public:

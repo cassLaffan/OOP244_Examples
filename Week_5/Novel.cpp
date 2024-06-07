@@ -43,3 +43,20 @@ std::ostream& Novel::displayBook(std::ostream& os){
 
     return os;
 }
+
+int main(){
+    // Calling empty constructors for experiment
+    Book A;
+    Novel B;
+
+    // Calling parameterized constructors
+    Book C(1009, "War and Peace", 700);
+    Novel D(1010, "Peace and War", 7, "Dolstoy", 2006);
+
+    std::cout << D.getBookID() << std::endl;
+    std::cout << D.getYear() << std::endl;
+
+    D.displayBook(std::cout);
+
+    return 0;
+}
