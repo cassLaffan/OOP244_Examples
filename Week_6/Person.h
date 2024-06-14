@@ -15,7 +15,7 @@ protected:
 public:
     Person();
     Person(std::string, long int, time_t);
-    Person(Person&);
+    Person(const Person&);
 
     ~Person(); // Not necessary given there's no dynamic data BUT it's for demonstration
 

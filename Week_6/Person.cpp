@@ -14,7 +14,7 @@ Person::Person(std::string n, long int sin = -1, time_t date = 0){
 }
 
 // Oh ho, some interesting syntax!
-Person::Person(Person& other){
+Person::Person(const Person& other){
     *this = Person(other.getName(), other.getSIN(), other.getDOB());
 }
 
