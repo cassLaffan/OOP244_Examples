@@ -10,26 +10,9 @@
 #include "Person.h"
 
 class Employee : public Person{
-    long int empID;
-    int maxDeps;
-    int currentDeps;
-    Person* deps; // dynamic person array
+
 public:
-    Employee();
-    Employee(long int, int, std::string, long int, time_t);
-    Employee(Employee&);
-    ~Employee();
 
-    // Getters and setters
-    long int getID() const;
-    int getMax() const;
-    int getCurrent() const;
-    Person* getDeps() const;
-
-    void setID(long int);
-    void setMax(int);
-
-    bool addChildToArray(Person&);
 };
 
 #endif
