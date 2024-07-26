@@ -15,7 +15,13 @@
 
 template <class T>
 class Node {
-    // Logic goes here
+    // Data members
+public:
+    // Constructors
+
+    // Getters + Setters
+
+    // Display Functio
 };
 
 #endif
