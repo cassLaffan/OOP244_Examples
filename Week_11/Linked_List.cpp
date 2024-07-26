@@ -8,6 +8,13 @@
 */
 
 int main(){
-    //Node<int> nOne(5);
+    Node<int> nOne(5);
+    Node<int> nTwo(17);
+    nOne.setNext(&nTwo);
+    Node<int> nZero(13, &nOne);
+    // nTwo.setNext(&nZero); will make it circular
+
+    nZero.display();
+
     return 0;
 }

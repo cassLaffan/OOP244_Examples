@@ -15,13 +15,45 @@
 
 template <class T>
 class Node {
-    // Data members
+    T data;
+    Node* next;
 public:
     // Constructors
+    Node(T d){
+        data = d;
+        next = nullptr;
+    }
+
+    Node(T d, Node* n){
+        data = d;
+        next = n;
+    }
 
     // Getters + Setters
+    T getData() const{
+        return data;
+    }
 
-    // Display Functio
+    void setData(T d){
+        data = d;
+    }
+
+    Node* getNext() const{
+        return next;
+    }
+
+    void setNext(Node* n){
+        next = n;
+    }
+
+    void display() const{
+        std::cout << "This node contains: " << data << std::endl;
+        if(next){
+            next->display();
+        }
+    }
+
 };
+
 
 #endif
