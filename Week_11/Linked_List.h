@@ -29,6 +29,10 @@ public:
         next = n;
     }
 
+    ~Node(){
+        next = nullptr;
+    }
+
     // Getters + Setters
     T getData() const{
         return data;
